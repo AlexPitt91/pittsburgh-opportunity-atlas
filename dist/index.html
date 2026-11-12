@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Explore poverty, commuting, housing tenure and education across Pittsburgh.">
+<title>Pittsburgh Opportunity Atlas</title>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="app.mjs"></script>
+</head>
+<body>
+<header><div class="wrap mast"><a href="./">PITTSBURGH <span>/</span> DATA ATLAS</a><a href="#method">Data & methodology</a></div></header>
+<main class="wrap">
+<section class="intro">
+<p class="eyebrow">2020–2024 AMERICAN COMMUNITY SURVEY</p>
+<h1>Pittsburgh Opportunity Atlas</h1>
+<p>Explore economic and social conditions across Pittsburgh, then compare two areas and see how each has changed since 2010–2014.</p>
+</section>
+<p id="status" role="status">Loading atlas…</p>
+<div id="atlas" hidden>
+<div class="controls"><label>Map indicator <select id="metric"></select></label><button id="download">Download indicator data (CSV)</button></div>
+<div class="grid">
+<section class="card map-card" aria-labelledby="map-title">
+<div class="card-head"><div><h2 id="map-title">Explore the city</h2><p>Choose an area on the map or from the list.</p></div><button id="reset">Reset view</button></div>
+<svg id="map" role="group" aria-label="Pittsburgh neighborhood map"></svg>
+<div id="legend" aria-label="Map color scale"></div>
+</section>
+<section class="card details" aria-labelledby="comparison-title">
+<h2 id="comparison-title">Compare areas</h2>
+<label>Primary area<select id="area"></select></label>
+<label>Comparison area<select id="compare"></select></label>
+<div id="insights" aria-live="polite"></div>
+</section>
+</div>
+</div>
+<section id="method">
+<h2>Data & methodology</h2>
+<p>Estimates come from Pitt’s University Center for Social and Urban Research. The two periods each pool five years of ACS responses. Some profiles cover multiple neighborhoods because census and city boundaries differ. The map uses city boundaries and highlights every neighborhood represented by a selected profile.</p>
+<p>Chateau and South Shore lack published profiles. The map shows estimates and simple percentage-point differences. Small differences may reflect sampling error. Commuting by transit measures use among workers age 16 and older, and renter share measures tenure among occupied housing units.</p>
+<p><a href="https://www.ucsur.pitt.edu/reports/census-reports">Pitt UCSUR profiles</a> · <a href="https://data.wprdc.org/dataset/neighborhoods2">City of Pittsburgh boundaries via WPRDC</a></p>
+</section>
+</main>
+<footer class="wrap">Pittsburgh Opportunity Atlas · Portfolio project by Alex Sandoval</footer>
+</body>
+</html>
